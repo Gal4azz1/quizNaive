@@ -25,7 +25,14 @@ body {
     margin-bottom: 40px;
 }
 
-.quiz{
-    
+.wrong{
+    background-color: rgb(173, 23, 23);
 }
+
+.correct{
+    background-color: rgb(15, 131, 20);
+}
+
+
+
 
