@@ -24,6 +24,7 @@
                     <input type="text" name="answer"/>
                     <input id="button" type="submit" value="Rispondi"/>
                 </form>
+                <h2 id="errore"></h2>
             </div>
         </div>
     </div>
@@ -54,6 +55,7 @@
         let form = document.querySelector("form");
         let testo = ""
         let body = document.querySelector("body");
+        let error = document.querySelector("#errore");
 
         let questions = [
             {
@@ -115,9 +117,13 @@
                 totalScore += questions[nQuestion].punteggio;
                 body.classList.remove("wrong")
                 body.classList.add("correct")
+                errore.innerHTML = ""
+
             }else{
                 body.classList.remove("correct")
                 body.classList.add("wrong")
+                errore.innerHTML = "Risposta corretta: " + questions[nQuestion].risposta_corretta;
+
             }
             
             nQuestion++;
